@@ -1,20 +1,13 @@
 <template>
     <div>
         <div class="title">
-            <h1>{{msg}}</h1>
+            <h1>This is Admin/Edit/{{$route.params.id}}</h1>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'admin',
-        data () {
-            return {
-                msg: 'This is the Admin page...'
-            }
-        }
-    }
+
 </script>
 
 <style>

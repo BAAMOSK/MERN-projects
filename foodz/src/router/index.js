@@ -15,12 +15,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
     },
     {
       path: '/cart',
-      name: 'cart',
+      name: 'Cart',
       component: Cart
     },
     {

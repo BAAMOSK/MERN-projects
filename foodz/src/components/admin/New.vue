@@ -11,7 +11,7 @@
         name: 'admin',
         data () {
             return {
-                msg: 'This is the Admin page...'
+                msg: 'Admin/New...'
             }
         }
     }
