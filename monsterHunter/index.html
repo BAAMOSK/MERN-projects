@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Monster Huner</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        
+        <div class="health-container">
+            
+            <p>Health</p>
+            <div class="healthbar">
+                <div class="health" :style="{width: playerHealth + '%'}">
+                    {{ playerHealth }}
+                </div>
+            </div>
+
+            <div class="healthbar">
+                <div class="health" :style="{width: monsterHealth + '%'}">
+                    {{ monsterHealth }}
+                </div>
+            </div>
+            <p>Kaiju</p>
+        </div>
+        
+        <button class="start" v-if="!gameIsRunning" @click="startGame">Start Game</button>
+                
+        <div class="controls" v-else>
+            <button class="attack" @click="attack">Attack</button>
+            <button class="special" @click="special">Special Attack</button>
+            <button class="heal" @click="heal">Heal</button>
+            <button class="run" @click="run">Run</button>
+        </div>
+
+        <div class="result-container">
+            <ul>
+                <li>You hit for 3 damages</li>
+                <li>Monster fucked you for 13 damages!</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+
