@@ -1,0 +1,29 @@
+<!DOCYTPE html>
+<head>
+    <title>Learning that Vue.js</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{ name }}</p>
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'Tee'
+        },
+        methods: {
+            changeTitle: function(event) {
+                this.name = event.target.value;
+            }
+        }
+    });
+</script>
+</body>
