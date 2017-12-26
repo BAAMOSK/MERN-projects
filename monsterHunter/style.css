@@ -62,4 +62,10 @@ ul {
 ul li {
     margin: 10px 50px;
     border: 1px solid black;
+    background: red;
 }
+
+.player {
+    background: lightblue;
+}
+
