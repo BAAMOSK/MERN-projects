@@ -2,11 +2,13 @@
     <div class="nav">
         <div class="left">
             <h1 class="logo"></h1>
-            <h1 class="user">UserName</h1>
+            <h1 class="user">{{ name }}</h1>
         </div>
         <div class="right">
             <ul>
-                <li>Logout</li>
+                <li>{{ natural }}</li>
+                <li>{{ learning }}</li>
+                <li><router-link to="/">LOGOUT</router-link></li>
             </ul>
         </div>
     </div>
@@ -16,7 +18,9 @@
     export default {
         data() {        
             return {
-                name: 'NAVBAR'
+                name: 'Tee Mak',
+                natural: 'English',
+                learning: 'Spanish'
             }
         }
     }
@@ -40,15 +44,36 @@
     }
     .logo {
         margin: 0;
+        margin-left: 15px;
         padding: 0;
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
         border: 1px solid green;
         border-radius: 100%;
         background: purple;
     }
     .user {
         margin-left: 10px;
+        color: white;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    ul li {
+        color: white;
+        list-style: none;
+        padding: 0px 5px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-right: 10px;
+        color: white;
+        background: green;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 5px;
     }
 
 
