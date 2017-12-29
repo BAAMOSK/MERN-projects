@@ -26,12 +26,13 @@
         },
         data() {
             return {
-               languages: ['English', 'Spanish', 'Cantonese', 'Mandarin', 'Khmer', 'Thai', 'French'] 
+              selected: false,
+              languages: ['English', 'Spanish', 'Cantonese', 'Mandarin', 'Khmer', 'Thai', 'French'] 
             }
         },
         methods: {
             select () {
-                console.log('clicked');
+                console.log($0);
             }
         }
     }
@@ -52,11 +53,11 @@
         border-radius: 15px;
     }
     .language li:hover {
-        color: white;
-        background: blue;
-    }
-    .language li:active {
         background: lightblue;
+    }
+    .selected {
+        color: white;
+        background: rebeccapurple;
     }
     a {
         margin-left: 40px;
