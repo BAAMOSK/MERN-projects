@@ -2,7 +2,11 @@
     <div class="nav">
         <div class="left">
             <h1 class="logo"></h1>
-            <h1 class="user">{{ name }}</h1>
+            <h1 class="user">
+              <router-link to='/dashboard'>
+                {{ name }}
+              </router-link>
+            </h1>
         </div>
 
             <h1 v-if="learn">
