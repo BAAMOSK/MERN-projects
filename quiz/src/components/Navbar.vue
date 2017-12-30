@@ -4,6 +4,11 @@
             <h1 class="logo"></h1>
             <h1 class="user">{{ name }}</h1>
         </div>
+
+            <h1 v-if="learn">
+              <router-link to="quiz" class="quiz">QUIZ</router-link>
+            </h1>
+
         <div class="right">
             <ul>
                 <li>{{ natural }}</li>
@@ -18,6 +23,7 @@
     export default {
         data() {        
             return {
+                learn: true,
                 name: 'Tee Mak',
                 natural: 'English',
                 learning: 'Spanish'
@@ -75,6 +81,9 @@
         padding: 10px;
         border-radius: 5px;
     }
-
+    .quiz {
+      background: black;
+      color: red;
+    }
 
 </style>
