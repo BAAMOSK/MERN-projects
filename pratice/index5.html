@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <button @click="name = !name">Toggle</button>
+      <p v-if="name">You either see me...</p>
+      <p v-else>...or me.</p>
+    </div>   
+  
+    <div>
+      <ul>
+        <li v-for="(item, index) in foods">{{ index }}: {{ item }}</li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li v-for="(book, key, index) in books">{{ index }}: {{key}}-{{ book }}</li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li v-for="store in testObject">
+          <template v-if="Array.isArray(store)">
+            <div v-for="element in store">{{element}}</div>
+          </template>
+          <template v-else>
+            {{ store }} 
+          </template>  
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+
+
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        name: true,
+        foods: ['pizza','soda','ramen'],
+        books: { title: 'Lord of the Rings', author: 'J.R.R. Tolkien', books: '3'},
+        testObject: {name: 'TESTOBJECT', data: [1.67, 1.33, .98, 2.21]}
+      },
+      methods: {
+        showMe () {
+          this.name = !this.name;
+        }
+      }
+    })
+
+  </script>
+</body>
+
