@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Exercise 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="app">
+    <button @click="popup">Eminem</button>
+    <input type="text" v-on:keydown="value = $event.target.value">
+    {{ value }}
+    <input type="text" v-on:keydown.enter="value = $event.target.value">
+    <div>
+      <p>This will save on keypress enter</p>
+    {{ value }}
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    new Vue ({
+      el: '#app',
+      data: {
+        value: ''        
+      },
+      methods: {
+        popup () {
+          return alert('Hi, my name is Slim Shady.');
+        }
+      }
+    
+    })
+
+
+  </script>
+
+</body>
+

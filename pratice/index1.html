@@ -11,6 +11,11 @@
     <p>VueJS is pretty cool - {{ name }}</p> 
     <p>This is my age: {{age * 3}}</p>
     <p>The random number is {{ getNumber() }}</p>
+    <img :src="url" style="width: 300px;">
+    <div>
+    <label>Name</label>
+    <input type="text" :value="name">
+    </div>
   </div>
 
 
@@ -20,12 +25,13 @@
     new Vue({
       el: '#app',
       data: {
-        name: 'Tee',
-        age: 37
+        name: 'Tee Mak',
+        age: 37,
+        url: 'https://images.pexels.com/photos/752534/pexels-photo-752534.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
       },
-      method: {
-        function getNumber () {
-          return 35;
+      methods: {
+        getNumber () {
+          return Math.floor(Math.random() * 100);
         }
       }
     })
