@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        background: #aaa;
+        font-size: 2em;
+      }
+      #effect {
+        width: 100px;
+        height: 100px;
+        border: 3px solid black;
+      }
+      hr {
+        padding: 50px;      
+      }
+      .highlight {
+        background: red;
+        width: 500px;
+      }
+      .shrink {
+        background: blue;
+      }
+      .orange {
+        background: orange;
+      }
+      .purple {
+        background: rebeccapurple;
+      }
+      .float {
+        float: right;
+      }
+      .text {
+        color: white;
+      }
+      .active {
+        background: green;
+      }
+      .border {
+        border: 10px dotted red;
+        width: 30%;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="makeActive">Start Effect</button>
+    <div id="effect" :class="effectClasses"></div>
+    <div :class=['purple','float','text']>I got no class...</div>
+
+    <div>
+      <input type="text" v-model="userClass">
+      <div v-bind:class=[userClass]>The top input will style me...</div>
+    </div>
+
+    <hr>
+
+    <div>
+      <input type="text" v-model="userClass"></input>
+      <label>Border: {{ isVisible }}</label>
+      <input type="text" v-model="isVisible"></input>
+      <div :class="[{border: isVisible}, userClass]">The second and third input style me.</div>
+    </div>
+
+    <hr>
+
+    <div>
+      <input type="text"></input>
+      <div></div>
+    </div>
+
+    <hr>
+
+    <div>
+      <button>Start Progress</button>
+      <div></div>
+    </div>
+
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        effectClasses: {
+          highlight: false,
+          shrink: false,
+          active: false
+        },
+        userClass: '',
+        isVisible: true
+      },
+      methods: {
+        startEffect () {
+          let vm = this; 
+          setInterval(function() {
+            vm.effectClasses.highlight =!vm.effectClasses.highlight;
+            vm.effectClasses.shrink =!vm.effectClasses.shrink;
+          }, 3000)           
+        },
+        switch () {
+          if (this.highlight === false) {
+            this.highlight = true;
+          } else {
+            this.shrink = true;
+          }
+        },
+        makeActive () {
+          let vm = this;
+          vm.effectClasses.active = !vm.effectClasses.active;
+        }
+      }
+    
+    })
+  </script>
+
+</body>
+
