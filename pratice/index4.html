@@ -42,6 +42,12 @@
         border: 10px dotted red;
         width: 30%;
       }
+      .progress {
+        width: 200px;
+        height: 20px;
+        border: 2px solid black;
+        margin: 5% 0;
+      }
     </style>
 </head>
 
@@ -60,23 +66,34 @@
 
     <div>
       <input type="text" v-model="userClass"></input>
-      <label>Border: {{ isVisible }}</label>
-      <input type="text" v-model="isVisible"></input>
-      <div :class="[{border: isVisible}, userClass]">The second and third input style me.</div>
+      <label>Border: {{ iMakeTrueFalse }}</label>
+      <input type="text" v-model="iMakeTrueFalse"></input>
+      <div :class="[{border: iMakeTrueFalse}, userClass]">The second and third input style me.</div>
     </div>
 
     <hr>
 
     <div>
-      <input type="text"></input>
-      <div></div>
+      <div>
+        <label>This is user defined background</label>
+        <input type="text" v-model="myStyles.background"></input>
+      </div>
+      <div>
+        <label>This is user defined height</label>
+        <input type="text" v-model="myStyles.height"></input>
+      </div>
+      <div>
+        <label>This is user defined width</label>
+        <input type="text" v-model="myStyles.width"></input>
+      </div>
+      <div :style="myStyles"></div>
     </div>
 
     <hr>
 
     <div>
-      <button>Start Progress</button>
-      <div></div>
+      <button @click="startIt">Start Progress</button>
+      <div :class="['progress']" :style="progressBar"></div>
     </div>
 
   </div>
@@ -92,7 +109,16 @@
           active: false
         },
         userClass: '',
-        isVisible: true
+        iMakeTrueFalse: true,
+        myStyles: {
+          width: '100px',
+          height: '100px',
+          background: 'black'
+        },
+        progressBar: {
+          width: '0px',
+          background: 'red'
+        }
       },
       methods: {
         startEffect () {
@@ -112,6 +138,14 @@
         makeActive () {
           let vm = this;
           vm.effectClasses.active = !vm.effectClasses.active;
+        },
+        startIt () {
+          let vm = this;
+          let width = 0;
+          setInterval(function() {
+            width = width + 10;
+            vm.progressBar.width = width + 'px'; 
+          },500)
         }
       }
     
