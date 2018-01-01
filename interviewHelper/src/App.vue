@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <h1>Interview Helper</h1>
-    <component :is="mode" @answered="answered($event)" @confirmed="mode='app-question'"></component>
+    <transition name="flip" mode="out-in">
+      <component :is="mode" @answered="answered($event)" @confirmed="mode='app-question'"></component>
+    </transition>
   </div>
 </template>
 
@@ -32,13 +34,40 @@
   }
   </script>
 
-  <style>
+<style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
   }
+  .flip-enter {
+  //transform: rotateY(0deg); 
+  }
+  .flip-enter-active {
+    animation: flip-in .5s ease-out forwards;
+  }
+  .flip-leave {
+  //transform: rotateY(0deg);
+  }
+  .flip-leave-active {
+    animation: flip-out .5s ease-out forwards;
+  }
+  @keyframes flip-out {
+    0% {
+      transform: rotateY(0deg); 
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+  }
+  @keyframes flip-in {
+    0% {
+      transform: rotateY(90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+
+
+
 </style>
