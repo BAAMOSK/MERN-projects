@@ -4,6 +4,7 @@ import Main from '@/components/Main'
 import Question from '@/components/Question'
 import HTML from '@/components/HTML'
 import JS from '@/components/JS'
+import CSS from '@/components/CSS'
 
 Vue.use(Router)
 
@@ -23,6 +24,16 @@ export default new Router({
       path: '/js',
       name: 'JS',
       component: JS
+    },
+    {
+      path: '/css',
+      name: 'CSS',
+      component: CSS
+    },
+    {
+      path: '/math',
+      name: 'Question',
+      component: Question
     }
   ]
 })

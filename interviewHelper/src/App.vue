@@ -41,6 +41,9 @@
   #app {
     text-align: center;
   }
+  body {
+    background: #666;
+  }
   .flip-enter {
   //transform: rotateY(0deg); 
   }
