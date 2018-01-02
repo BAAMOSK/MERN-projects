@@ -23,15 +23,14 @@
     created () {
       axios.get('https://vuefs-c40c3.firebaseio.com/qa.json')
         .then(res => {
-          console.log(res)
           const data = res.data
           const qa = []
           for (let key in data) {
             const item = data[key]
+            console.log('This is the data[key]', item)
             item.id = key
             qa.push(item);
           }
-          console.log(qa)
           this.dbQ = qa[0].question
           this.dbA = qa[0].answer
         })
