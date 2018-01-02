@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <h1>Interview Helper</h1>
-    <transition name="flip" mode="out-in">
+    <router-link to="/"><h1>Dashboard</h1></router-link>
+    <Main />
+    <!-- <transition name="flip" mode="out-in">
       <component :is="mode" @answered="answered($event)" @confirmed="mode='app-question'"></component>
-    </transition>
+    </transition> -->
+    <router-view />
   </div>
 </template>
 
 <script>
-  import Question from './components/Question'
-  import Answer from './components/Answer'
+  import Main from './components/Main'
+  /* import Question from './components/Question'
+  import Answer from './components/Answer' */
 
   export default {
     data () {
@@ -28,8 +31,8 @@
       }
     },
     components: {
-      appQuestion: Question,
-      appAnswer: Answer
+      /*appQuestion: Question,
+      appAnswer: Answer*/
     }
   }
   </script>
@@ -65,6 +68,10 @@
     100% {
       transform: rotateY(0deg);
     }
+  }
+  a {
+    text-decoration: none;
+    color: red;
   }
 
 
