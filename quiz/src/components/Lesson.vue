@@ -2,33 +2,47 @@
     <div>
       <Navbar />
         <h1>Learn Lessons</h1>
-        <div class="lesson-container">
-          <div class="word">
-            <img src="https://images.pexels.com/photos/126588/pexels-photo-126588.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
-            <h1>HAY</h1>
-            <p>The food horses eat or you can make a bed out of it.</p>
-            <audio controls>
-              <source src="" type="audio/ogg">
-            </audio>
+        <div class="lesson-container">        
+          <div class="question-container">
+            <ul>
+              <li>Boss</li>
+              <li>Cat</li>
+              <li>Dog</li>
+              <li>Car</li>
+              <li>Monster</li>
+              <li>Bathroom</li>
+            </ul>
           </div>
-          <div class="word">
-            <img src="https://images.pexels.com/photos/187069/pexels-photo-187069.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
-            <h1>FAY</h1>
-            <p>A fay is a fairy, google it if you don't believe me!</p>
-            <audio controls>
-              <source src="" type="audio/ogg">
-            </audio>
+
+          <div class="lesson-container">
+            <div class="word">
+              <img src="https://images.pexels.com/photos/126588/pexels-photo-126588.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+              <h1>HAY</h1>
+              <p>The food horses eat or you can make a bed out of it.</p>
+              <audio controls>
+                <source src="" type="audio/ogg">
+              </audio>
+            </div>
+            <div class="word">
+              <img src="https://images.pexels.com/photos/187069/pexels-photo-187069.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+              <h1>FAY</h1>
+              <p>A fay is a fairy, google it if you don't believe me!</p>
+              <audio controls>
+                <source src="" type="audio/ogg">
+              </audio>
+            </div>
+            <div class="word">
+              <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&w=1350&q=80">
+              <h1>JEFE</h1>
+              <p>Hay-fay means boss</p>
+              <audio controls>
+                <source src="" type="audio/ogg">
+              </audio>
+            </div>
           </div>
-          <div class="word">
-            <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&w=1350&q=80">
-            <h1>JEFE</h1>
-            <p>Hay-fay means boss</p>
-            <audio controls>
-              <source src="" type="audio/ogg">
-            </audio>
-          </div>
+          <button>NEXT</button>
+
         </div>
-        <button>NEXT</button>
     </div>
 </template>
 
@@ -70,6 +84,17 @@
     font-size: 1.5em;
     background: blue;
     color: white;
+  }
+  .lesson-container {
+    display: flex;    
+  }
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+  .question-container ul li {
+    color: black;
   }
 
 </style>

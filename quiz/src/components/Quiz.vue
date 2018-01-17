@@ -2,7 +2,6 @@
     <div class="quiz-container">
         <Navbar />
         <h1>Take the quiz here!</h1>
-
         <div class="question">
           {{ question }}
         </div>
