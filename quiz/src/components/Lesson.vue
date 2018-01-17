@@ -5,12 +5,7 @@
         <div class="lesson-container">        
           <div class="question-container">
             <ul>
-              <li>Boss</li>
-              <li>Cat</li>
-              <li>Dog</li>
-              <li>Car</li>
-              <li>Monster</li>
-              <li>Bathroom</li>
+              <li v-for="question in questions">{{ question }}</li>
             </ul>
           </div>
 
@@ -55,6 +50,7 @@
     data () {
       return {
         learn: true,
+        questions: ['Boss', 'Cat', 'Dog', 'Monster', 'Bathroom', 'Hungry', 'yes', 'everything', 'I have', 'only', 'nothing'],
         lesson: ['You know the word hay: The things horses eat.', "A fay is a fairy, google it if you don't believe me!"],
         image: []
       }
@@ -91,10 +87,18 @@
   .question-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 1px solid black;
   }
-  .question-container ul li {
-    color: black;
+  .question-container ul {
+    padding: 0 15px;
   }
-
+  .question-container ul li {
+    font-size: 1.3rem;
+    color: black;
+    list-style: none;
+  }
+  .question-container ul li:nth-child(even) {
+    background-color: #aaa;
+  }
 </style>

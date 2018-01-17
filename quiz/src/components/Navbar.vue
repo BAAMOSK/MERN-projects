@@ -66,11 +66,11 @@
         margin-left: 10px;
         color: white;
     }
-    ul {
+    .right ul {
         display: flex;
         flex-direction: row;
     }
-    ul li {
+    .right ul li {
         color: white;
         list-style: none;
         padding: 0px 5px;
