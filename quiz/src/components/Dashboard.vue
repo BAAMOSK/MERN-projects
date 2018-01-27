@@ -13,7 +13,9 @@
                <li v-for='item in languages' @click="select">{{ item }}</li>
             </ul>
         </div>
-        <router-link class="btn-start" to="/lesson">START</router-link>
+        <div class="btn-container">
+          <router-link class="btn-start" to="/lesson">START</router-link>
+        </div>
     </div>
 </template>
 
@@ -69,9 +71,8 @@
     .options-container ul {
       list-style: none;
     }
-    .btn-start {
+    .btn-container {
       display: flex;
-      align-items: flex-start;
-
+      justify-content: center;
     }
 </style>
