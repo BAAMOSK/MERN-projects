@@ -43,7 +43,7 @@
         border: 1px solid black;
         min-height: 100px;
         height: 10vh;
-        background: #888;
+        background-image: linear-gradient(to right, magenta, blue);
         display: flex;
         justify-content: space-between;
         align-items: center;

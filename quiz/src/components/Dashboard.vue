@@ -13,7 +13,7 @@
                <li v-for='item in languages' @click="select">{{ item }}</li>
             </ul>
         </div>
-        <router-link to="/lesson">START</router-link>
+        <router-link class="btn-start" to="/lesson">START</router-link>
     </div>
 </template>
 
@@ -62,5 +62,16 @@
     a {
         margin-left: 40px;
         border-radius: 10px;
+    }
+    .options-container {
+      text-align: center;
+    }
+    .options-container ul {
+      list-style: none;
+    }
+    .btn-start {
+      display: flex;
+      align-items: flex-start;
+
     }
 </style>
