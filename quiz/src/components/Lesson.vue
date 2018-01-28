@@ -83,9 +83,11 @@
   }
   .lesson-container {
     display: flex;    
+    text-align: center;
   }
   .question-container {
     display: flex;
+    margin: 0 10px;
     flex-direction: column;
     align-items: center;
     border: 1px solid black;
