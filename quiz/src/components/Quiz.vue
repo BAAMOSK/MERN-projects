@@ -1,9 +1,11 @@
 <template>
     <div class="quiz-container">
         <Navbar />
-        <h1>Take the quiz here!</h1>
-        <div class="question">
-          {{ question }}
+        <div class="quiz-header">
+          <h1>Take the quiz here!</h1>
+          <div class="question">
+            {{ question }}
+          </div>
         </div>
         
         <div>
@@ -51,6 +53,9 @@
 </script>
 
 <style>
+  .quiz-header {
+    text-align: center;
+  }
   .quiz-container {
     background: #bbb;
     height: 100vh;
@@ -69,15 +74,20 @@
     border-radius: 10px;
     padding: 50px;
     margin: 15px;  
+    background: #ddd;
   }
   .answers-container li {
     font-size: 2em;
-    background: red;
+    background: gray;
     border: 1px dotted black;
     border-radius: 20px;
     height: 50px;
+    list-style: none;
+    text-align: center;
   }
   audio {
-    margin: 15px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
   }
 </style>
