@@ -11,6 +11,7 @@
 
             <h1 v-if="learn">
               <router-link to="quiz" class="quiz">QUIZ</router-link>
+              <router-link to="chat" class="quiz">CHAT</router-link>
             </h1>
 
         <div class="right">

@@ -5,6 +5,7 @@ import Dashboard from '@/components/Dashboard'
 import Navbar from '@/components/Navbar'
 import Lesson from '@/components/Lesson'
 import Quiz from '@/components/Quiz'
+import Chat from '@/components/Chat'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/lesson',
       name: 'Lesson',
       component: Lesson
+    },
+    {
+      path: '/chat',
+      name: 'Chat',
+      component: Chat
     },
     {
       path: '/quiz',
