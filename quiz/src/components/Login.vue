@@ -67,8 +67,8 @@
     }
 
     .btn--secondary {
-      background: var(--color-primary-0);
-      border: 5px solid var(--color-primary-3);
+      background: blue;
+      border: 1px solid black;
       transition: all .3s;
       margin: 2%;
       position: absolute;
@@ -78,7 +78,6 @@
     }
 
     .btn--secondary:hover {
-      border: 10px solid var(--color-primary-3);
-      font-size: 2rem;
+      padding: 4%;
     }
 </style>
