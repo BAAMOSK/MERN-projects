@@ -5,7 +5,11 @@
       <div class="chat-lobby">
       <img src="https://images.pexels.com/photos/745766/pexels-photo-745766.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" class="bio-pic">
       <div class="bio-stats">
-      <p>BIO</p>
+      <p>Tee Mak</p>
+      <p>I speak Spanish.</p>
+      <p>Trying to learn English.</p>
+      <p>Location: Florida</p>
+      <p>???</p>
       </div>
       </div>
       <button>CHAT</button>
@@ -26,14 +30,15 @@
 <style>
   .chat-lobby {
     display: flex;
+    justify-content: space-around;
   }
   .bio-pic {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
   }
   .bio-stats {
-    flex-direction: flex-end;
+    //flex-direction: flex-end;
   }
   .chat-container {
     text-align: center;
