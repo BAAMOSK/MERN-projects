@@ -12,6 +12,7 @@
       <p>???</p>
       </div>
       </div>
+      <!-- TODO route to chatroom -->
       <button>CHAT</button>
     </div>
   </div>
