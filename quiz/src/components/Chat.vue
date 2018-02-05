@@ -13,6 +13,7 @@
       </div>
       </div>
       <!-- TODO route to chatroom -->
+      <router-link to='/chatroom'>
       <button>CHAT</button>
     </div>
   </div>
