@@ -1,0 +1,7 @@
+.out {
+    border: 5px solid green;
+    margin: 2% auto;
+    text-align: center;
+    width: 10%;
+    border-radius: 20px;
+}
