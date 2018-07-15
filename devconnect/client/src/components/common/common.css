@@ -1,0 +1,18 @@
+#smart-logo {
+    height: 15px;
+}
+
+.screen-container {
+    text-align: start;
+    width: 50%;
+    border: 2px solid #7bbbb4;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 1%;
+    color: white;
+}
+
+.screen-container p {
+    margin: 10px 0;
+}

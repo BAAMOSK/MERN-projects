@@ -1,0 +1,28 @@
+.navbar-container {
+    background: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}

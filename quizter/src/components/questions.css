@@ -1,0 +1,11 @@
+.questions {
+    display: flex;
+}
+
+.questions ul {
+    list-style: none;
+}
+
+.questions ul li {
+    width: 50%;
+}

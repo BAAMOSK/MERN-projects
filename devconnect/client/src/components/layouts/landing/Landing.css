@@ -1,0 +1,10 @@
+.landing-container {
+    background: silver;
+    display: block;
+    text-align: center;
+    height: 100vh;
+}
+
+.landing-message {
+    padding: 15px;
+}

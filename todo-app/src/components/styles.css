@@ -1,0 +1,31 @@
+.todo-input {
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.ui-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ui-button {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+.tasks {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
