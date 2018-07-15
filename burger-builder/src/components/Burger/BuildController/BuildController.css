@@ -1,0 +1,32 @@
+.build_controller {
+    width: 50%;
+    background-color: #CF8F2E;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px #555;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px 0;
+
+    position: fixed;
+    left: 25%;
+    bottom: 20px;
+}
+
+.price {
+    background: transparent;
+    color: black;
+}
+
+.build__order_button {
+    padding: 10px;
+    background: green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.build__order_button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
