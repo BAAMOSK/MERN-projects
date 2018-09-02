@@ -1,0 +1,27 @@
+.button {
+    display: block;
+    padding: 5px;
+    margin: 0 5px;
+    min-width: 100px;
+    border: 1px solid chocolate;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.success {
+    background: green;
+}
+
+.danger {
+    background: red;
+}
+
+.info {
+    background: teal;
+}
+
+.button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}

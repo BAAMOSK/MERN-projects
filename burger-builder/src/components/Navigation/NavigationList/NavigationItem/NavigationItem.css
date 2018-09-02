@@ -1,0 +1,18 @@
+.navigation_item {
+    margin: 0 20px;
+}
+
+.navigation_item__a {
+    text-decoration: none;
+}
+
+.navigation_item__p {
+    color: yellow;
+    transform: scale(1.2);
+    padding: 10px;
+    background: firebrick;
+}
+
+.navigation_item__p:hover {
+    background: orange;
+}
