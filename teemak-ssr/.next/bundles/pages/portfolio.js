@@ -1,0 +1,1 @@
+module.exports=__NEXT_REGISTER_PAGE("/portfolio",function(){return{page:webpackJsonp([4],{218:function(e,t,n){e.exports=n(219)},219:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(5),u=n.n(o);t.default=function(){return u.a.createElement("div",null,"This is the PORTFOLIO page")}}},[218]).default}});

@@ -1,0 +1,9 @@
+.logo {
+    background: transparent;
+    padding: 8px;
+    height: 100%;
+}
+
+.logo__img {
+    height: 100%;
+}
