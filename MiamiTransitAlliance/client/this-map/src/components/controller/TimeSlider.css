@@ -1,0 +1,9 @@
+.slider-container {
+    position: fixed;
+    top: 0;
+    right: 78px;
+    z-index: 10;
+    height: 100vh;
+    background: black;
+    color: white;
+}
