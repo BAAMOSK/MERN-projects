@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './BuildController.css';
 import BuildControls from './BuildControls/BuildControls';
+import Button from '../../ui/Button/Button';
 
 const controls = [
     { label: 'Lettuce', type: 'lettuce' },
     { label: 'Bacon', type: 'bacon' },
     { label: 'Cheese', type: 'cheese' },
-    { label: 'Patty', type: 'patty' }
+    { label: 'Beef', type: 'beef' }
 ];
 
 /*const renderBuildControls = () => {
@@ -31,8 +32,8 @@ const buildController = props => (
                 disabled={props.disable[item.type]}
             />
         )}
-
-        <button disabled={props.validOrder} className={classes.build__order_button}>ORDER</button>
+        
+        <Button btnType="info" click={props.order} disable={!props.validOrder}>ORDER</Button>
 
     </div>
 );
