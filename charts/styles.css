@@ -1,0 +1,50 @@
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	font-family: 'Source Sans Pro'
+}
+
+.container {
+	width: 90%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.canvas-container {
+	width: 50%;
+}
+
+.legend-items {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: space-evenly;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+}
+
+.legend-item {
+	display: flex;
+	cursor: pointer;
+}
+
+.legend-item > * {
+	margin: 0 10px;
+}
+
+.legend-item span {
+	height: 20px;
+	display: inline-block;
+	padding: 0 10px;
+	border-radius: 50%;
+}
